@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="page-header__inner">
+    {% assign cat = page.categories | first %}
+    <div class="breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a> ›
+      <a href="{{ '/' | append: cat | append: '/' | relative_url }}">{{ cat | capitalize }}</a> ›
+      {{ page.title | truncate: 50 }}
+    </div>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="post-wrapper">
+    <div class="post-header">
+      {% assign cat = page.categories | first %}
+      <span class="post-row__category cat-{{ cat }}">{{ cat }}</span>
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <span>📅 {{ page.date | date: "%d/%m/%Y" }}</span>
+        {% if page.author %}<span>✍ {{ page.author }}</span>{% endif %}
+      </div>
+    </div>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <div class="post-back">
+      <a class="button button--ghost" href="javascript:history.back()">← Voltar</a>
+    </div>
+  </div>
+</div>

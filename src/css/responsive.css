@@ -1,0 +1,32 @@
+/* ─── RESPONSIVIDADE ─────────────────────────── */
+@media (max-width: 760px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1;
+  }
+  .nav a {
+    padding: 9px 10px;
+    font-size: 0.82rem;
+  }
+  .brand img {
+    width: 120px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .post-table thead { display: none; }
+  .post-table tbody tr { display: block; padding: 10px 14px; }
+  .post-table td { display: block; padding: 2px 0; width: 100% !important; }
+  .post-table .col-icon { display: none; }
+  .post-table .col-meta { text-align: left; }
+  .site-footer__inner { flex-direction: column; text-align: center; }
+  .pantheon-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .nav { gap: 1px; }
+  .nav a { padding: 8px 7px; font-size: 0.75rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .pantheon-grid { grid-template-columns: 1fr; }
+}

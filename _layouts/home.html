@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <p class="hero__eyebrow">Blog Oficial</p>
+  <h1>Tormenta Ascension</h1>
+  <p class="subtitle">Crie seu Avatar, explore Arton e dispute seu lugar entre os Deuses.</p>
+  <div class="hero__actions">
+    <a class="button" href="{{ '/eventos/' | relative_url }}">Ver Eventos</a>
+    <a class="button button--ghost" href="{{ '/panteao/' | relative_url }}">Conhecer o Panteão</a>
+  </div>
+</section>
+
+<div class="main-content">
+  <div class="home-layout">
+
+    <!-- Coluna principal: últimas postagens -->
+    <div class="main-col">
+      <div class="forum-panel">
+        <div class="forum-panel__title">
+          <h2>⚔ Últimas Postagens</h2>
+          <a href="{{ '/anuncios/' | relative_url }}">ver todos »</a>
+        </div>
+        <table class="post-table">
+          <thead>
+            <tr>
+              <th class="col-icon"></th>
+              <th class="col-title">Tópico</th>
+              <th class="col-meta">Data / Autor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for post in site.posts limit:8 %}
+              {% include post-card.html post=post %}
+            {% else %}
+              <tr><td colspan="3" class="empty-state">Nenhuma postagem encontrada.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <!-- Status do servidor -->
+      <div class="sidebar-box">
+        <div class="sidebar-box__title">◉ Status dos Servidores</div>
+        <div class="sidebar-box__body">
+          <div class="server-status">
+            <span class="status-dot busy"></span>
+            <span>Servidor Principal — Em Breve</span>
+          </div>
+          <div class="server-status">
+            <span class="status-dot busy"></span>
+            <span>Servidor de Testes — Em Breve</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links rápidos -->
+      <div class="sidebar-box">
+        <div class="sidebar-box__title">☰ Navegação Rápida</div>
+        <div class="sidebar-box__body sidebar-links">
+          <a href="{{ '/anuncios/' | relative_url }}">Anúncios Oficiais</a>
+          <a href="{{ '/eventos/' | relative_url }}">Calendário de Eventos</a>
+          <a href="{{ '/comunidade/' | relative_url }}">Relatos da Comunidade</a>
+          <a href="{{ '/panteao/' | relative_url }}">Panteão dos Deuses</a>
+        </div>
+      </div>
+
+      <!-- Panteão rápido -->
+      <div class="sidebar-box">
+        <div class="sidebar-box__title">✦ Panteão — Tronos Ocupados</div>
+        <div class="sidebar-box__body">
+          <ul class="pantheon-mini">
+            <li><span class="god-name">Khalmyr</span><span class="god-domain">— Justiça</span></li>
+            <li><span class="god-name">Allihanna</span><span class="god-domain">— Natureza</span></li>
+            <li><span class="god-name">Wynna</span><span class="god-domain">— Magia</span></li>
+            <li><span class="god-name">Tenebra</span><span class="god-domain">— Sombras</span></li>
+            <li><span class="god-name">Nimb</span><span class="god-domain">— Caos</span></li>
+            <li><span class="god-name">Azgher</span><span class="god-domain">— Sol</span></li>
+            <li><span class="god-name">Valkaria</span><span class="god-domain">— Aventura</span></li>
+          </ul>
+          <div class="throne-vacant">10 Tronos aguardam seus Deuses…</div>
+          <a href="{{ '/panteao/' | relative_url }}" style="font-size:0.8rem; margin-top: 8px; display:block;">Ver Panteão completo »</a>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</div>

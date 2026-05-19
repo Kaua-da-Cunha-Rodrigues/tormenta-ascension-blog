@@ -1,0 +1,14 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="/src/img/Logo.png" alt="Tormenta Ascension">
+    </a>
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+      <a href="{{ '/eventos/' | relative_url }}" {% if page.url contains '/eventos' %}class="active"{% endif %}>Eventos</a>
+      <a href="{{ '/anuncios/' | relative_url }}" {% if page.url contains '/anuncios' %}class="active"{% endif %}>Anúncios</a>
+      <a href="{{ '/comunidade/' | relative_url }}" {% if page.url contains '/comunidade' %}class="active"{% endif %}>Comunidade</a>
+      <a href="{{ '/panteao/' | relative_url }}" {% if page.url contains '/panteao' %}class="active"{% endif %}>Panteão</a>
+    </nav>
+  </div>
+</header>
