@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Tormenta20";
-  src: url(/src/fonts/Tormenta.ttf);
+  src: url(../fonts/Tormenta.ttf);
 }
 
 /* ─── Variáveis ─────────────────────────────── */
@@ -48,9 +48,6 @@
 html {
   scroll-behavior: smooth;
 }
-main {
-  flex: 1; /* ocupa todo o espaço restante, empurrando o footer pra baixo */
-}
 body {
   background-color: var(--bg-page);
   background-image:
@@ -61,10 +58,12 @@ body {
   font-size: 15px;
   line-height: 1.6;
   min-height: 100vh;
-
-  min-height: 100vh;
   display: flex;
-  flex-direction: column; /* empilha header → main → footer */
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1, h2, h3, h4, h5 {
