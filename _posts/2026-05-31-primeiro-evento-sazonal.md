@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Evento Sazonal: Festival da Primeira Chama"
-date: 2026-05-20 12:00:00 -0300
+date: 2026-05-31 12:00:00 -0300
 categories: eventos
 author: Equipe de Eventos
 ---
