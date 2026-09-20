@@ -5,9 +5,9 @@ permalink: /eventos/
 description: Eventos especiais, chefes globais, festivais e acontecimentos temporários do servidor.
 ---
 
-<div class="event-callout">
+<!-- <div class="event-callout">
   ⚔ <strong>Evento ativo:</strong> Festival da Primeira Chama — disponível nas grandes cidades de Arton durante a primeira semana.
-</div>
+</div> -->
 
 <div class="forum-panel">
   <div class="forum-panel__title">
