@@ -2,7 +2,7 @@
 layout: post
 title: "Obrigado pelo Festival da Primeira Chama"
 date: 2026-06-8
-categories: anuncios
+categories: eventos
 ---
 
 A todos os Jogadores,
